@@ -1,0 +1,30 @@
+title: brxyxn
+email: brxyxn.corp@live.com
+description: >
+  Encontrarás toda la documentación y notas que he recopilado durante mi aprendizaje de PHP, Ruby, Python, NodeJS, Laravel y otros.
+baseurl: /
+url: "https://brxyxn.xyz"
+twitter_username: brxyxmp
+facebook_username: brxyxmp
+github_username:  brxyxncorp
+author:
+  name: "Brayan López"
+  profession: "Software & Web Developer"
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:categories/:title/
+      excerpt_separator: <!--more-->
+
+markdown: kramdown
+theme: brxyxn
+
+exclude:
+    - Gemfile
+    - Gemfile.lock

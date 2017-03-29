@@ -1,0 +1,59 @@
+<header>
+	{% assign part = page.url  | split: "/" %}
+	<nav class="menu">
+		<ul>
+		{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+		{% for p in navigation_pages %}
+		{% if p.navigation_weight %}
+			{% if part[1] contains p.title %}
+			<li class="active"><a href="{{p.url}}">
+				{{ p.title }}
+			</a></li>
+			{%else%}
+				<li{%if p.url == page.url %} class="active" {%endif%}><a href="{{p.url}}">{{ p.title }}</a></li>
+			{%endif%}
+		{% endif %}
+		{% endfor %}
+		</ul>
+	</nav>
+	<!-- 
+	if url contains page.url and url == / then
+		li.active
+	else
+		li.active
+	endif
+
+		Mejorar el menú con ciclo for y condición con if
+		para que funcione el active class mediante page.url
+	 
+	<nav class="menu">
+		<ul> Si current = a URL del LI entonces agregar class="active" 
+			<li {% if page.url == "/" %}class='active'{% endif %}><a href="http://localhost:4000">inicio</a></li>
+			<li {% if page.url contains "/blog/" %}class='active'{% endif %}><a href="/blog/">blog</a></li>
+			<li {% if page.url contains "/curso/" %}class='active'{% endif %}><a href="/curso/">cursos</a></li>
+			<li {% if page.url == "/acerca/" %}class='active'{% endif %}><a href="/acerca/">acerca</a></li>
+			<! - -{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+			{% for p in navigation_pages %}
+				{% if p.navigation_weight %}
+				<li {% if p.url == page.url %} class="active" {% endif %}>
+					<a href="{{p.url}}">{{p.title}}</a>
+				</li>
+				{%endif%}
+			{%endfor%}
+		</ul>
+	</nav>-->
+</header>
+{% if page.url == "/" %}
+<div class="header-container">
+	<div class="parallelogram">
+		<div class="content">
+			<div class="title">
+				<h1>Conected <br> Apréndelo tu mismo</h1>
+			</div>
+			<div class="sign-up">
+				<button>Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}

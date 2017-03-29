@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+
+*{
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+}
+p{text-align: justify;}
+h1{font-size: 42.6667px;}
+
+/*
+	Header Nav Menu
+*/
+header nav.menu {
+	background-color: #4685C4;
+
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul {
+	margin: 0;
+	padding: 0 10%;
+	font-size: 0;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	/*Flex properties*/
+  	width: 80%;
+	max-width: 100%;
+	padding: 0 0px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-webkit-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	-webkit-box-flex: 0;
+	flex: 0 0 auto;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/*End Flex properties*/
+}
+header ul li {
+	flex: 0 0 auto;
+	padding-right: var(--half-gutter-width);
+	padding-left: var(--half-gutter-width);
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 100%;
+	text-align: center;
+}
+header ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  line-height: 60px;
+  padding: 0 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  font-weight: 300;
+  color: #fff;
+  font-family: 'Open Sans';
+}
+header ul li a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: -1;
+  transform: skewX(-30deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+header ul li:hover a,
+header ul li:focus a,
+header ul li.active a {
+	color: #fff;
+}
+header ul li:hover a:after,
+header ul li:focus a:after,
+header ul li.active a:after {
+  opacity: 1;
+}
+
+/*
+	Header Top :: after Nav
+*/
+.header-container{
+    overflow:hidden;
+	width: 100%;
+	height: 40vh;
+}
+
+.parallelogram {
+    width: 75%;
+    height: 40vh;
+    margin: 0 0 0 -110px;
+    -webkit-transform: skew(-30deg);
+       -moz-transform: skew(-30deg);
+         -o-transform: skew(-30deg);
+			transform: skew(-30deg);
+    background: white;
+    overflow:hidden;
+    position:relative;
+}
+.header-container .content{
+	background: -webkit-linear-gradient(left, #45C7A6, #339AC2);
+	background: -moz-linear-gradient(left, #45C7A6, #339AC2);
+	background: -o-linear-gradient(left, #45C7A6, #339AC2);
+	background: linear-gradient(left, #45C7A6, #339AC2);
+    position:absolute;
+	padding: 40px 0px 20px 150px;
+	text-align: justify;
+    top:0;
+    left:0px;
+    right:-110px;
+    bottom:0;
+	-webkit-transform: skew(30deg);
+       -moz-transform: skew(30deg);
+         -o-transform: skew(30deg);
+			transform: skew(30deg);
+}
+
+.header-container .content .title{
+	color: white;
+	font-family: "Open Sans";
+	font-weight: 300;
+	text-align: center;
+}
+
+.header-container .content .sign-up{
+	width: 100px;
+	height: 25px;
+	margin: 0 auto;
+}
+.header-container .content .sign-up > button{
+	background-color: #4285f4;
+	border: 0px transparent;
+	padding: 15px 25px;
+	font-size: 18px;
+	color: white;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*
+	Courses & Blog.Posts
+*/
+section > *{
+	text-align: justify;
+}
+
+/*
+	Articles
+*/
+section{
+	width: 100%;
+}
+
+article{
+  padding: 15px;
+  margin: 15px 0;
+  background-color: skyblue;
+  border: 1px solid;
+}
+
+hr{
+	border: 1px solid gray;
+	width: 50%;
+    border-style: dashed;
+}
+
+
+/*
+	relatedPosts - Aside
+*/
+aside.related-posts{
+
+}
